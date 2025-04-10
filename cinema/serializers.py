@@ -41,13 +41,13 @@ class MovieSerializer(serializers.ModelSerializer):
                   "actors",
                   "image",
                   )
-        read_only_fields = ["id", "image"]
+        read_only_fields = ["image"]
 
 
 class MovieImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ("id", "image")
+        fields = ["id", "image"]
 
 
 class MovieListSerializer(MovieSerializer):
